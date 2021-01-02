@@ -15,7 +15,9 @@ server.get("/api/ping", (req, res) => {
 })
 
 const imagesRouter = require("./routes/images")
+const usersRouter = require("./routes/users")
 
-server.use("api/images", imagesRouter)
+server.use("/api/images", imagesRouter)
+server.use("/api/users", usersRouter)
 
 module.exports = server
